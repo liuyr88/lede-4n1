@@ -11,3 +11,4 @@ src-git passwall https://github.com/xiaorouji/openwrt-passwall
 src-git OpenClash https://github.com/vernesong/OpenClash
 src-git lienol https://github.com/Lienol/openwrt-package
 src-git infinityfreedom https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git
+src-git bypass https://github.com/kiddin9/openwrt-bypass.git
