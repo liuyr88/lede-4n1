@@ -6,11 +6,11 @@ src-git telephony https://git.openwrt.org/feed/telephony.git
 #src-git targets https://github.com/openwrt/targets.git
 #src-git oldpackages http://git.openwrt.org/packages.git
 #src-link custom /usr/src/openwrt/custom-feed
-#src-git helloworld https://github.com/fw876/helloworld
+src-git helloworld https://github.com/fw876/helloworld
 #src-git OpenClash https://github.com/vernesong/OpenClash
 #src-git lienol https://github.com/Lienol/openwrt-package
 src-git infinityfreedom https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git
 #src-git bypass https://github.com/kiddin9/openwrt-bypass.git
-#####src-git passwall https://github.com/xiaorouji/openwrt-passwall   
-src-git kenzo https://github.com/kenzok8/openwrt-packages     
-src-git small https://github.com/kenzok8/small
+src-git passwall https://github.com/xiaorouji/openwrt-passwall   
+#src-git kenzo https://github.com/kenzok8/openwrt-packages     
+#src-git small https://github.com/kenzok8/small
