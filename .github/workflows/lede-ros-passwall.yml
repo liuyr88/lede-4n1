@@ -39,7 +39,7 @@ env:
 
 jobs:
   build:
-    runs-on: Debian 11
+    runs-on: Ubuntu LTS
 #ubuntu-20.04
 
     steps:
