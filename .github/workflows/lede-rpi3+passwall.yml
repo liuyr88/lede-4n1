@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: lede-rpi3+
+name: lede-rpi3+passwall
 
 on:
   repository_dispatch:
