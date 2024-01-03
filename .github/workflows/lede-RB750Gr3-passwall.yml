@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: lede-RB750Gr3
+name: lede-RB750Gr3-passwall
 
 on:
   repository_dispatch:
