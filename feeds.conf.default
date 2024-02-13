@@ -8,4 +8,6 @@ src-git telephony https://git.openwrt.org/feed/telephony.git
 #src-git targets https://github.com/openwrt/targets.git
 #src-git oldpackages http://git.openwrt.org/packages.git
 #src-link custom /usr/src/openwrt/custom-feed
-src-git small https://github.com/kiddin9/openwrt-packages.git
+src-git kenzo https://github.com/kenzok8/openwrt-packages
+src-git small https://github.com/kenzok8/small
+#src-git infinityfreedom https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git
