@@ -15,4 +15,4 @@ src-git telephony https://git.openwrt.org/feed/telephony.git
 src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git
 src-git passwall https://github.com/xiaorouji/openwrt-passwall.git
 src-git  mosdns https://github.com/sbwml/luci-app-mosdns -b v5
-src-git  v2ray-geodata https://github.com/sbwml/v2ray-geodata
+src-git  sbwml https://github.com/sbwml/v2ray-geodata
