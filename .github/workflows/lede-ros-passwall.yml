@@ -94,7 +94,7 @@ jobs:
       run: cd openwrt && rm -rf feeds/packages/lang/golang && git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
 
     - name:  自定义mosdns
-      run: rm -rf feeds/luci/applications/luci-app-mosdns && rm -rf feeds/packages/net/v2ray-geodata
+      run: cd openwrt && rm -rf feeds/luci/applications/luci-app-mosdns && rm -rf feeds/packages/net/v2ray-geodata
         git clone https://github.com/sbwml/luci-app-mosdns -b v5-lua package/mosdns
         git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata     
         
