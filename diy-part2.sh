@@ -8,7 +8,9 @@ sed -i 's/192.168.1.1/192.168.50.254/g' package/base-files/files/bin/config_gene
 #rm -rf /feeds/kenzo/v2raya
 #rm -rf /feeds/kenzo/luci-app-v2raya
 #git clone https://github.com/v2rayA/v2raya-openwrt.git package/v2raya
-
+#修改ip，修改标头
+sed -i 's/192.168.1.1/192.168.50.254/g' package/base-files/files/bin/config_generate
+sed -i 's/OpenWrt/Melt-OpenWrt/g' package/base-files/files/bin/config_generate
 #rm -rf feeds/luci/applications/luci-app-mosdns
 #rm -rf feeds/packages/net/{alist,adguardhome,smartdns}
 #rm -rf feeds/packages/lang/golang
