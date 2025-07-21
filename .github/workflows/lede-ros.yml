@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: lede-ros
+name: iede-ros
 
 on:
   repository_dispatch:
@@ -19,8 +19,8 @@ on:
         required: false
         default: 'false'
   schedule:
-   - cron: 0 19 * * 6
- # watch:
+    - cron: 0 18 * * 5
+  #watch:
   #  types: started
 
 env:
@@ -39,11 +39,12 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
 
     steps:
     - name: Checkout
       uses: actions/checkout@main
+      
     - name: 释放磁盘空间
       uses: jlumbroso/free-disk-space@main
       with:
@@ -57,13 +58,14 @@ jobs:
         haskell: true
         large-packages: true
         swap-storage: true
+        
     - name: Initialization environment
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
         sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
         sudo -E apt-get -qq update
-        sudo -E apt-get -qq install $(curl -fsSL git.io/depends-ubuntu-2004)
+        sudo -E apt-get -qq install $(curl -fsSL git.io/depends-ubuntu-1804)
         sudo -E apt-get -qq autoremove --purge
         sudo -E apt-get -qq clean
         sudo timedatectl set-timezone "$TZ"
@@ -86,7 +88,7 @@ jobs:
 
     - name:  更新源 #Update feeds
       run: cd openwrt && ./scripts/feeds update -a
-      
+              
     - name: 安装源 #Install feeds
       run: cd openwrt && ./scripts/feeds install -a
 
@@ -190,11 +192,11 @@ jobs:
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
 
-    - name: Delete workflow runs
-      uses: GitRML/delete-workflow-runs@main
+    - name: Remove old Artifacts
+      uses: c-hive/gha-remove-artifacts@v1.2.0
       with:
-        retain_days: 1
-        keep_minimum_runs: 3
+        age: '1 day'
+        skip-recent: 3
 
     - name: Remove old Releases
       uses: dev-drprasad/delete-older-releases@v0.1.0
